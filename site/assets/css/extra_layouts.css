@@ -1,0 +1,175 @@
+/* Rhizome Layout */
+.rhizome-layout {
+    position: relative;
+    min-height: 100vh;
+    background: #0f172a;
+    /* Tech dark */
+    color: #e2e8f0;
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    overflow: hidden;
+}
+
+.rhizome-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    height: 100vh;
+}
+
+.rhizome-connections {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.3;
+}
+
+.rhizome-container.theme-bio {
+    background: #1a2f1a;
+    /* Organic dark green */
+}
+
+.rhizome-container.theme-bio .rhizome-connections path {
+    stroke: #4ade80;
+    /* Bio green */
+}
+
+.rhizome-container.theme-techno {
+    background: #0f172a;
+}
+
+.rhizome-container.theme-techno .rhizome-connections path {
+    stroke: #06b6d4;
+    /* Cyan */
+}
+
+.rhizome-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    gap: 2rem;
+}
+
+.rhizome-block {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 12px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+.rhizome-block:hover {
+    transform: translateY(-5px) scale(1.02);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.rhizome-block.main-block {
+    flex: 0 0 100%;
+    text-align: center;
+    background: transparent;
+    border: none;
+    backdrop-filter: none;
+}
+
+.rhizome-block.page-block {
+    flex: 0 0 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.rhizome-block.toggle-block {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    padding: 1rem;
+}
+
+.theme-toggle .theme-btn {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    margin: 0 0.25rem;
+    border-radius: 20px;
+    transition: all 0.2s;
+}
+
+.theme-toggle .theme-btn.active,
+.theme-toggle .theme-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: white;
+}
+
+/* Swarm Layout */
+.swarm-layout {
+    background: #000;
+    color: #0f0;
+    min-height: 100vh;
+    font-family: 'Courier New', monospace;
+}
+
+.swarm-node {
+    position: absolute;
+    border: 1px solid #0f0;
+    background: rgba(0, 255, 0, 0.1);
+    padding: 1rem;
+    color: #0f0;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.swarm-node:hover {
+    background: #0f0;
+    color: #000;
+    box-shadow: 0 0 15px #0f0;
+}
+
+.swarm-node.main-node {
+    border: 2px solid #0f0;
+    text-align: center;
+}
+
+.pulse-node {
+    border-style: dashed;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.5;
+        box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.4);
+    }
+
+    70% {
+        opacity: 1;
+        box-shadow: 0 0 0 10px rgba(0, 255, 0, 0);
+    }
+
+    100% {
+        opacity: 0.5;
+        box-shadow: 0 0 0 0 rgba(0, 255, 0, 0);
+    }
+}
+
+/* Sentient Layout specific overrides if needed (mostly inline in built_css usually, but can be here) */
+.sentient-layout {
+    /* Handled by style.css overrides */
+}

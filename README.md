@@ -1,24 +1,33 @@
-# Pantoeirene
+# Pantoeirene ☮️
 
-Welcome to the Pantoeirene project repository.
+*πᾶν εἰρήνη — Universal Peace*
 
-## Overview
+A digital platform dedicated to achieving global peace, equality, cooperation, and positive societal transformation.
 
-*Description coming soon.*
+## Vision
+
+Pantoeirene is built on four core pillars:
+
+- **☮️ Peace** — Promoting non-violent conflict resolution and intercultural dialogue
+- **⚖️ Equality** — Advocating for social, economic, and political equality
+- **🤝 Cooperation** — Fostering collaborative networks that transcend borders
+- **🌱 Positive Development** — Supporting innovations that enhance human flourishing
 
 ## Structure
 
 ```
 pantoeirene/
-├── README.md
-├── src/          # Source files
-├── docs/         # Documentation
-└── assets/       # Static assets
+├── site/               # Website files
+│   ├── index.html      # Main homepage
+│   └── assets/         # CSS, JS, images
+├── deploy.sh           # Deployment script
+└── deploy.env          # Deployment configuration
 ```
 
-## Getting Started
+## Deployment
 
-*Setup instructions to be added.*
+1. Configure `deploy.env` with your target webroot
+2. Run `./deploy.sh` to deploy
 
 ---
 
